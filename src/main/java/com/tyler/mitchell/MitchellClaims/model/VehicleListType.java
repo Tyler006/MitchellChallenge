@@ -73,4 +73,12 @@ public class VehicleListType {
         return this.vehicleDetails;
     }
 
+    public VehicleInfoType getVehicle(String vin){
+    	for(int i = 0; i < vehicleDetails.size();i++){
+    		if(vehicleDetails.get(i).getVin().equals(vin))
+    			return vehicleDetails.get(i);
+    	}
+    	return new VehicleInfoType();
+    }
+
 }
